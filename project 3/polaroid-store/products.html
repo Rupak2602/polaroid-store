@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================
+       BASIC META
+  ========================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polaroids | Polaroid Store</title>
+
+  <!-- =========================
+       MAIN CSS
+  ========================== -->
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<script>
+  function testAdd() {
+    alert("Button clicked ✅");
+  }
+</script>
+
+
+<body>
+
+  <!-- =========================
+       TOP BAR / HEADER
+  ========================== -->
+  <header class="top-bar">
+    <h1 class="logo">Polaroids</h1>
+    <a href="cart.html" class="nav-btn">Cart</a>
+  </header>
+
+  <!-- =========================
+       PRODUCTS LIST
+       (Admin uploaded products)
+  ========================== -->
+  <section class="features">
+
+    <!-- =====================
+         PRODUCT 1
+    ====================== -->
+    <div class="feature-card">
+      <img 
+        src="./assets/polaroids/sample1.jpg"
+        alt="Classic Polaroid"
+        style="width:100%; border-radius:12px; margin-bottom:10px;"
+      />
+
+
+
+   
+
+    </div>
+
+    <!-- =====================
+         PRODUCT 2
+    ====================== -->
+    <div class="feature-card">
+      <img 
+        src="./assets/polaroids/car.jpg"
+        alt="Mini Polaroid"
+        style="width:100%; border-radius:12px; margin-bottom:10px;"
+      />
+
+      <h3>Mini Polaroid</h3>
+      <p>Size: Mini • Cute Memories</p>
+      <p><strong>₹69 / piece</strong></p>
+
+      <button class="primary-btn"
+        onclick="addToCart(
+          'Mini Polaroid',
+          69,
+          './assets/polaroids/sample2.jpg'
+        )">
+        Add to Cart
+      </button>
+    </div>
+
+
+    <!-- =========================
+            PRODUCT 3
+            ======================-->
+    <div class="feature-card">
+      <img 
+        src="./assets/polaroids/1.jpg"
+        alt="Square Polaroid"
+        style="width:100%; border-radius:12px; margin-bottom:10px;"
+      />
+
+      <h3>Square Polaroid</h3>
+      <p>Size: Square • Modern Look</p>
+      <p><strong>₹129 / piece</strong></p>
+
+      <button class="primary-btn"
+        onclick="addToCart(
+          'Square Polaroid',
+          129,
+          './assets/polaroids/1.jpg'
+        )">
+        Add to Cart
+      </button>        
+
+    <!-- =====================
+         PRODUCT 4
+    ====================== -->
+    <div class="feature-card">
+      <img 
+        src="./assets/polaroids/2.jpg"
+        alt="Square Polaroid"
+        style="width:100%; border-radius:12px; margin-bottom:10px;"
+      />
+
+      <h3>Square Polaroid</h3>
+      <p>Size: Square • Modern Look</p>
+      <p><strong>₹129 / piece</strong></p>
+
+      <button class="primary-btn"
+        onclick="addToCart(
+          'Square Polaroid',
+          129,
+          './assets/polaroids/2.jpg'
+        )">
+        Add to Cart
+      </button>
+    </div>
+
+
+        <!-- =====================
+         PRODUCT 5
+    ====================== -->
+    <div class="feature-card">
+      <img 
+        src="./assets/polaroids/3.jpg"
+        alt="Mini Polaroid"
+        style="width:100%; border-radius:12px; margin-bottom:10px;"
+      />
+
+      <h3>Mini Polaroid</h3>
+      <p>Size: Mini • Cute Memories</p>
+      <p><strong>₹69 / piece</strong></p>
+
+      <button class="primary-btn"
+        onclick="addToCart(
+          'Mini Polaroid',
+          69,
+          './assets/polaroids/3.jpg'
+        )">
+        Add to Cart
+      </button>
+    </div>
+
+
+
+        <!-- =====================
+         PRODUCT 6
+    ====================== -->
+    <div class="feature-card">
+      <img 
+        src="./assets/polaroids/4.jpg"
+        alt="Mini Polaroid"
+        style="width:100%; border-radius:12px; margin-bottom:10px;"
+      />
+
+      <h3>Mini Polaroid</h3>
+      <p>Size: Mini • Cute Memories</p>
+      <p><strong>₹69 / piece</strong></p>
+
+      <button class="primary-btn"
+        onclick="addToCart(
+          'Mini Polaroid',
+          69,
+          './assets/polaroids/4.jpg'
+        )">
+        Add to Cart
+      </button>
+    </div>
+
+
+
+        <!-- =====================
+         PRODUCT 7
+    ====================== -->
+    <div class="feature-card">
+      <img 
+        src="./assets/polaroids/5.jpg"
+        alt="Mini Polaroid"
+        style="width:100%; border-radius:12px; margin-bottom:10px;"
+      />
+
+      <h3>Mini Polaroid</h3>
+      <p>Size: Mini • Cute Memories</p>
+      <p><strong>₹69 / piece</strong></p>
+
+      <button class="primary-btn"
+        onclick="addToCart(
+          'Mini Polaroid',
+          69,
+          './assets/polaroids/sample5.jpg'
+        )">
+        Add to Cart
+      </button>
+    </div>
+
+
+        <!-- =====================
+         PRODUCT 8
+    ====================== -->
+    <div class="feature-card">
+      <img 
+        src="./assets/polaroids/6.jpg"
+        alt="Mini Polaroid"
+        style="width:100%; border-radius:12px; margin-bottom:10px;"
+      />
+
+      <h3>Mini Polaroid</h3>
+      <p>Size: Mini • Cute Memories</p>
+      <p><strong>₹69 / piece</strong></p>
+
+      <button class="primary-btn"
+        onclick="addToCart(
+          'Mini Polaroid',
+          69,
+          './assets/polaroids/sample6.jpg'
+        )">
+        Add to Cart
+      </button>
+    </div>
+
+
+
+        <!-- =====================
+         PRODUCT 9
+    ====================== -->
+    <div class="feature-card">
+      <img 
+        src="./assets/polaroids/7.jpg"
+        alt="Mini Polaroid"
+        style="width:100%; border-radius:12px; margin-bottom:10px;"
+      />
+
+      <h3>Mini Polaroid</h3>
+      <p>Size: Mini • Cute Memories</p>
+      <p><strong>₹69 / piece</strong></p>
+
+      <button class="primary-btn"
+        onclick="addToCart(
+          'Mini Polaroid',
+          69,
+          './assets/polaroids/sample7.jpg'
+        )">
+        Add to Cart
+      </button>
+    </div>
+
+
+        <!-- =====================
+         PRODUCT 10
+    ====================== -->
+    <div class="feature-card">
+      <img 
+        src="./assets/polaroids/8.jpg"
+        alt="Mini Polaroid"
+        style="width:100%; border-radius:12px; margin-bottom:10px;"
+      />
+
+      <h3>Mini Polaroid</h3>
+      <p>Size: Mini • Cute Memories</p>
+      <p><strong>₹69 / piece</strong></p>
+
+      <button class="primary-btn"
+        onclick="addToCart(
+          'Mini Polaroid',
+          69,
+          './assets/polaroids/8.jpg'
+        )">
+        Add to Cart
+      </button>
+    </div>
+
+
+        <!-- =====================
+         PRODUCT 11
+    ====================== -->
+    <div class="feature-card">
+      <img 
+        src="./assets/polaroids/9.jpg"
+        alt="Mini Polaroid"
+        style="width:100%; border-radius:12px; margin-bottom:10px;"
+      />
+
+      <h3>Mini Polaroid</h3>
+      <p>Size: Mini • Cute Memories</p>
+      <p><strong>₹69 / piece</strong></p>
+
+      <button class="primary-btn"
+        onclick="addToCart(
+          'Mini Polaroid',
+          69,
+          './assets/polaroids/sample9.jpg'
+        )">
+        Add to Cart
+      </button>
+    </div>
+
+
+        <!-- =====================
+         PRODUCT 2
+    ====================== -->
+    <div class="feature-card">
+      <img 
+        src="./assets/polaroids/10.jpg"
+        alt="Mini Polaroid"
+        style="width:100%; border-radius:12px; margin-bottom:10px;"
+      />
+
+      <h3>Mini Polaroid</h3>
+      <p>Size: Mini • Cute Memories</p>
+      <p><strong>₹69 / piece</strong></p>
+
+      <button class="primary-btn"
+        onclick="addToCart(
+          'Mini Polaroid',
+          69,
+          './assets/polaroids/10.jpg'
+        )">
+        Add to Cart
+      </button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer">
+    <p>© 2025 Polaroid Store</p>
+  </footer>
+
+  <!-- =========================
+       MAIN JAVASCRIPT
+  ========================== -->
+  <script src="../js/app.js"></script>
+
+</body>
+</html>
+
