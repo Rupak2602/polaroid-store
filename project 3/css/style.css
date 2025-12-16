@@ -1,0 +1,596 @@
+/* =========================
+   ROOT COLORS
+========================= */
+:root {
+  --bg-black: #0a0a0f;
+  --card-black: #111118;
+  --neon-pink: #ff2f92;
+  --neon-glow: 0 0 12px rgba(255, 47, 146, 0.8),
+               0 0 25px rgba(255, 47, 146, 0.6);
+  --text-white: #ffffff;
+  --text-gray: #bdbdbd;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+body {
+  background: radial-gradient(circle at top, #1a0a14, var(--bg-black));
+  color: var(--text-white);
+  min-height: 100vh;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 10, 15, 0.75);
+  backdrop-filter: blur(14px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 47, 146, 0.2);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--neon-pink);
+  text-shadow: var(--neon-glow);
+}
+
+/* =========================
+   NAV BUTTON
+========================= */
+.nav-btn {
+  text-decoration: none;
+  color: var(--neon-pink);
+  padding: 8px 14px;
+  border: 1px solid var(--neon-pink);
+  border-radius: 12px;
+  font-size: 13px;
+  box-shadow: var(--neon-glow);
+  transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: var(--neon-pink);
+  color: black;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.features {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.cta {
+  padding: 20px;
+  text-align: center;
+}
+
+/* =========================
+   CARD (NEON GLASS)
+========================= */
+.feature-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 47, 146, 0.08),
+    rgba(0, 0, 0, 0.6)
+  );
+  backdrop-filter: blur(16px);
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid rgba(255, 47, 146, 0.25);
+  box-shadow: 0 0 18px rgba(255, 47, 146, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: var(--neon-glow);
+}
+
+.feature-card h3 {
+  margin-bottom: 6px;
+  color: var(--neon-pink);
+}
+
+.feature-card p {
+  font-size: 13px;
+  color: var(--text-gray);
+  margin-bottom: 6px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 47, 146, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--text-white);
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #777;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: var(--neon-glow);
+}
+
+/* =========================
+   PRIMARY BUTTON (NEON)
+========================= */
+.primary-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 14px;
+  margin-top: 14px;
+  border-radius: 16px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ff2f92, #ff5fb0);
+  color: black;
+  box-shadow: var(--neon-glow);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 47, 146, 1);
+}
+
+.primary-btn:active {
+  transform: scale(0.96);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  color: #777;
+}
+
+
+/* =========================
+   BROWSE POLAROIDS PILL BUTTON
+========================= */
+.browse-pill {
+  display: inline-block;
+  margin: 14px 0 20px 20px; /* left spacing */
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
+  background: linear-gradient(135deg, #ff2f92, #ff6fb5);
+  border-radius: 999px; /* perfect round */
+  text-decoration: none;
+  box-shadow:
+    0 0 10px rgba(255, 47, 146, 0.8),
+    0 0 25px rgba(255, 47, 146, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover */
+.browse-pill:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 18px rgba(255, 47, 146, 1),
+    0 0 40px rgba(255, 47, 146, 0.8);
+}
+
+/* Click (mobile feel) */
+.browse-pill:active {
+  transform: scale(0.94);
+}
+
+/* =========================
+   HERO POSTER
+========================= */
+.hero-poster {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 28px;
+  margin: 20px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+/* =========================
+   HERO TEXT OVERLAY
+========================= */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  max-width: 520px;
+  color: white;
+}
+
+/* MAIN TITLE */
+.hero-text h1 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ff2f92;
+  text-shadow:
+    0 0 10px rgba(255,47,146,0.9),
+    0 0 30px rgba(255,47,146,0.6);
+  margin-bottom: 10px;
+}
+
+/* SUB TITLE */
+.hero-text p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   BROWSE POLAROIDS PILL
+========================= */
+.browse-pill {
+  display: inline-block;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
+  background: linear-gradient(135deg, #ff2f92, #ff6fb5);
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow:
+    0 0 12px rgba(255, 47, 146, 0.9),
+    0 0 30px rgba(255, 47, 146, 0.6);
+  transition: 0.25s ease;
+}
+
+.browse-pill:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 25px rgba(255, 47, 146, 1),
+    0 0 50px rgba(255, 47, 146, 0.9);
+}
+
+
+/* =========================
+   HERO POSTER (RESPONSIVE)
+========================= */
+.hero-poster {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+  border-radius: 26px;
+  margin: 14px;
+}
+
+/* IMAGE */
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55);
+}
+
+/* TEXT OVERLAY */
+.hero-text {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 520px;
+  color: white;
+}
+
+/* TITLE */
+.hero-text h1 {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ff2f92;
+  text-shadow:
+    0 0 10px rgba(255,47,146,0.9),
+    0 0 30px rgba(255,47,146,0.7);
+  margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+.hero-text p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+/* BROWSE BUTTON */
+.browse-pill {
+  display: inline-block;
+  padding: 9px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
+  background: linear-gradient(135deg, #ff2f92, #ff6fb5);
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow:
+    0 0 12px rgba(255,47,146,0.9),
+    0 0 28px rgba(255,47,146,0.6);
+  transition: 0.25s ease;
+}
+
+.browse-pill:hover {
+  transform: scale(1.08);
+}
+
+/* =========================
+   MOBILE FRIENDLY
+========================= */
+@media (max-width: 768px) {
+
+  .hero-poster {
+    height: 360px;
+    margin: 10px;
+    border-radius: 22px;
+  }
+
+  .hero-text {
+    left: 14px;
+    right: 14px;
+    top: auto;
+    bottom: 26px;
+    transform: none;
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .browse-pill {
+    padding: 7px 16px;
+    font-size: 12px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE (VERY SMALL)
+========================= */
+@media (max-width: 420px) {
+
+  .hero-poster {
+    height: 300px;
+  }
+
+  .hero-text h1 {
+    font-size: 21px;
+  }
+
+}
+
+
+/* ======================
+   HERO SLIDER
+====================== */
+.hero-slider {
+  width: 100%;
+  height: 460px;
+  position: relative;
+  overflow: hidden;
+  margin: 14px;
+  border-radius: 26px;
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55);
+}
+
+/* TEXT OVER POSTER */
+.hero-text {
+  position: absolute;
+  left: 20px;
+  bottom: 30px;
+  max-width: 520px;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ff2f92;
+  text-shadow:
+    0 0 10px rgba(255,47,146,0.9),
+    0 0 30px rgba(255,47,146,0.7);
+  margin-bottom: 8px;
+}
+
+.hero-text p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 14px;
+}
+
+/* BUTTON */
+.browse-pill {
+  display: inline-block;
+  padding: 9px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
+  background: linear-gradient(135deg, #ff2f92, #ff6fb5);
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow:
+    0 0 12px rgba(255,47,146,0.9),
+    0 0 28px rgba(255,47,146,0.6);
+}
+
+/* ======================
+   MOBILE FRIENDLY
+====================== */
+@media (max-width: 768px) {
+
+  .hero-slider {
+    height: 340px;
+    margin: 10px;
+  }
+
+  .hero-text {
+    left: 14px;
+    right: 14px;
+    bottom: 22px;
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+  }
+
+  .hero-text p {
+    font-size: 12px;
+  }
+
+  .browse-pill {
+    padding: 7px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-slider {
+    height: 300px;
+  }
+}
+
+/* =========================
+   POSTER SLIDER
+========================= */
+.poster-section {
+  width: 100%;
+  overflow: hidden;
+  margin: 14px 0;
+  border-radius: 24px;
+}
+
+.poster-track {
+  display: flex;
+  width: 400%;
+  animation: slidePoster 16s infinite ease-in-out;
+}
+
+/* POSTER IMAGE */
+.poster-track img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  flex-shrink: 0;
+  filter: brightness(0.55);
+}
+
+/* =========================
+   MOBILE FRIENDLY
+========================= */
+@media (max-width: 768px) {
+  .poster-track img {
+    height: 320px;
+  }
+}
+
+@media (max-width: 420px) {
+  .poster-track img {
+    height: 280px;
+  }
+}
+
+/* =========================
+   SLIDE ANIMATION
+========================= */
+@keyframes slidePoster {
+  0%   { transform: translateX(0%); }
+  25%  { transform: translateX(0%); }
+
+  30%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-100%); }
+
+  55%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-200%); }
+
+  80%  { transform: translateX(-300%); }
+  100% { transform: translateX(-300%); }
+}
+/* =========================
+   CART ITEM STYLES
+
+========================= */
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 47, 146, 0.2);
+}
+
+
+
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================
+       BASIC META
+  ========================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Placed | Polaroid Store</title>
+
+  <!-- =========================
+       MAIN CSS
+  ========================== -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- =========================
+       SMALL SUCCESS ANIMATION
+  ========================== -->
+  <style>
+    .success-box {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      animation: popIn 0.6s ease;
+    }
+
+    .checkmark {
+      font-size: 56px;
+      margin-bottom: 10px;
+      animation: bounce 1s ease;
+    }
+
+    @keyframes popIn {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounce {
+      0%   { transform: scale(0.8); }
+      50%  { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       TOP BAR
+  ========================== -->
+  <header class="top-bar">
+    <h1 class="logo">Order Status</h1>
+  </header>
+
+  <!-- =========================
+       SUCCESS MESSAGE
+  ========================== -->
+  <section class="features">
+
+    <div class="success-box">
+      <div class="checkmark">✅</div>
+      <h2>Order Placed Successfully!</h2>
+
+      <p style="margin-top:10px; font-size:14px; color:#555;">
+        Thank you for ordering polaroids with us ❤️  
+        <br>Your memories are now being printed.
+      </p>
+
+      <p style="margin-top:14px; font-size:13px; color:#777;">
+        Order ID:
+        <strong>#POLA<span id="order-id"></span></strong>
+      </p>
+
+      <a href="index.html" class="primary-btn" style="margin-top:18px;">
+        Back to Home
+      </a>
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer">
+    <p>© 2025 Polaroid Store</p>
+  </footer>
+
+  <!-- =========================
+       GENERATE ORDER ID
+  ========================== -->
+  <script>
+    // Simple random order ID
+    document.getElementById("order-id").textContent =
+      Math.floor(100000 + Math.random() * 900000);
+  </script>
+
+</body>
+</html>
