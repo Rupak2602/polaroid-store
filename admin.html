@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================
+       BASIC META
+  ========================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | Polaroid Store</title>
+
+  <!-- =========================
+       MAIN CSS
+  ========================== -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    /* Small admin-only styles */
+    .admin-note {
+      font-size: 13px;
+      color: #666;
+      margin-top: 6px;
+    }
+
+    .file-input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       TOP BAR
+  ========================== -->
+  <header class="top-bar">
+    <h1 class="logo">Admin Panel</h1>
+    <a href="index.html" class="nav-btn">View Site</a>
+  </header>
+
+  <!-- =========================
+       ADMIN CONTENT
+  ========================== -->
+  <section class="features">
+
+    <!-- =====================
+         ADD PRODUCT INFO
+    ====================== -->
+    <div class="feature-card">
+      <h3>Add New Polaroid</h3>
+
+      <!-- PRODUCT NAME -->
+      <input
+        type="text"
+        placeholder="Polaroid Name (ex: Classic Polaroid)"
+        style="width:100%; padding:12px; margin-top:10px; border-radius:10px; border:1px solid #ddd;"
+      />
+
+      <!-- PRODUCT PRICE -->
+      <input
+        type="number"
+        placeholder="Price (₹)"
+        style="width:100%; padding:12px; margin-top:10px; border-radius:10px; border:1px solid #ddd;"
+      />
+
+      <!-- IMAGE NOTE -->
+      <p class="admin-note">
+        Upload image manually inside:<br>
+        <strong>assets / polaroids /</strong><br>
+        and use same file name in products.html
+      </p>
+
+      <!-- IMAGE FILE (ONLY FOR REFERENCE) -->
+      <input
+        type="file"
+        class="file-input"
+        disabled
+      />
+
+      <p class="admin-note">
+        (Static website – image upload works via GitHub only)
+      </p>
+    </div>
+
+    <!-- =====================
+         HOW TO ADD PRODUCT
+    ====================== -->
+    <div class="feature-card">
+      <h3>How to Add Product (IMPORTANT)</h3>
+
+      <ol style="font-size:14px; color:#555; margin-top:10px;">
+        <li>
+          Copy polaroid image into  
+          <strong>polaroid-store/assets/polaroids/</strong>
+        </li>
+        <li>
+          Open <strong>products.html</strong>
+        </li>
+        <li>
+          Duplicate one product card block
+        </li>
+        <li>
+          Change:
+          <ul>
+            <li>Image path</li>
+            <li>Product name</li>
+            <li>Price</li>
+          </ul>
+        </li>
+        <li>
+          Save → Push to GitHub → Vercel auto deploy 🚀
+        </li>
+      </ol>
+    </div>
+
+    <!-- =====================
+         ADMIN WARNING
+    ====================== -->
+    <div class="feature-card">
+      <h3>Admin Only</h3>
+      <p style="font-size:14px; color:#555;">
+        This page is for <strong>ADMIN USE ONLY</strong>.<br>
+        Do not share this link with customers.
+      </p>
+
+      <p class="admin-note">
+        URL example:<br>
+        <code>your-site.vercel.app/admin.html</code>
+      </p>
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer">
+    <p>© 2025 Polaroid Store – Admin</p>
+  </footer>
+
+</body>
+</html>
